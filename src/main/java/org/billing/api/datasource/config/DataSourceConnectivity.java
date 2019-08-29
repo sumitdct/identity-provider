@@ -60,7 +60,7 @@ public class DataSourceConnectivity {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource());
         // Classpath scanning of @Component, @Service, etc annotated class
-        entityManagerFactory.setPackagesToScan("org.billing.api.identity.provider.entities");
+        entityManagerFactory.setPackagesToScan("org.billing.api.entities");
         // Vendor adapter
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactory.setJpaVendorAdapter(vendorAdapter);

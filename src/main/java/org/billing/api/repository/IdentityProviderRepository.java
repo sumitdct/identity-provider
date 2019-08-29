@@ -84,7 +84,7 @@ public class IdentityProviderRepository extends HibernateRepository
         Root<UserEntity> userEntityRoot= userEntityCriteriaQuery.from(UserEntity.class);
         Join<UserEntity, RolesEntity> roleEntityFetch =(Join<UserEntity, RolesEntity>)userEntityRoot.fetch(UserEntity_.rolesEntity);
         Join<RolesEntity,ClientEntity> organizationEntityJoin=(Join<RolesEntity,ClientEntity>)roleEntityFetch.fetch(RolesEntity_.clientEntity);
-        Join<UserEntity, UserProductEntity> userEntityUserProductEntityJoin=(Join<UserEntity,UserProductEntity>)userEntityRoot.fetch(UserEntity_.userProductEntities);
+        //Join<UserEntity, UserProductEntity> userEntityUserProductEntityJoin=(Join<UserEntity,UserProductEntity>)userEntityRoot.fetch(UserEntity_.userProductEntities);
         userEntityCriteriaQuery.select(userEntityRoot).distinct(true);
         userEntityCriteriaQuery
                 .where(

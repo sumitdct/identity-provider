@@ -129,6 +129,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <executable>true</executable>
+                    <sources>
+                        <source>target/generated-sources/annotations</source>
+                    </sources>
                     <compilerArguments>
                         <!--Two Processor Configuration
                         1. Lombok
